@@ -1,0 +1,159 @@
+@font-face {
+    font-family: myFont;
+    src: url(Helvetica\ MediumItalic.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: myFont;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #010001;
+    color: white;
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+.Header{
+    width: 100%;
+    margin-bottom: 2%;
+    }
+
+.container {
+    padding-top: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: #010001;
+    
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+    
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li span{
+    color: red;
+}
+
+nav ul li a:hover {
+    color: red;
+    transition: 0.3s;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    justify-items: center;
+    align-items: center;
+    margin: 0 15px;
+
+}
+
+.column{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.image-container{
+    position: relative;
+    width: 100%;
+    padding-top: 75%;
+}
+
+.image-container img{
+    filter: saturate(0%);
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    transition: 2.5s;
+}
+.image-container img:hover{
+    filter: saturate(100%);
+    opacity: 1;
+    transform: scale(1.01);
+    transition: 0.2s;
+}
+
+.image-info{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    z-index: 2;
+}
+.image-info h2{
+    margin-bottom: 15%;
+}
+
+.more{
+    border: 1px solid transparent;
+    padding: 0.5rem 0.5rem;
+    border-color: #fff;
+    color: #fff;
+    border-width: 2px;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: .1em;
+    text-decoration: none;
+    transition: 2.5s;
+}
+
+.more:hover{
+    color: black;
+    background-color: white;
+    transition: 0.5s;
+}
+
+
+
+
+/* Footer */
+
+footer-container{
+    width: 100%;
+    padding: 70px 30px 20px;
+
+}
+.footerbottom{
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+.footerbottom p{ 
+color: white;
+}
+.designer {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
