@@ -82,19 +82,23 @@ nav ul li a:hover {
     padding-top: 75%;
 }
 
-.image-container img{
-    filter: saturate(0%);
-    opacity: 0.7;
+.image-container .front{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
     
+}
+
+.front {
+    filter: saturate(0%);
+    opacity: 0.7;
+    object-fit: cover;
     transition: 2.5s;
 }
-.image-container img:hover{
+
+.front:hover{
     filter: saturate(100%);
     opacity: 1;
     transform: scale(1.01);
@@ -106,10 +110,25 @@ nav ul li a:hover {
     position: absolute;
     top: 50%;
     left: 40%;
-    z-index: 2;
+    z-index: 1;
 }
+
+
 .image-info h2{
     margin-bottom: 15%;
+}
+
+
+.image-info.active-image-info {
+    z-index: 1;
+}
+
+.info-text {
+    transition: transform 0.5s ease-in-out;
+}
+
+.info-text.hide {
+    transform: scale(0);
 }
 
 .more{
@@ -123,6 +142,7 @@ nav ul li a:hover {
     letter-spacing: .1em;
     text-decoration: none;
     transition: 2.5s;
+    background-color: transparent;
 }
 
 .more:hover{
@@ -156,4 +176,106 @@ color: white;
     letter-spacing: 1px;
     font-weight: 400;
     margin: 0px 5px;
+}
+
+
+
+.modal{
+    position: fixed;
+    
+}
+
+
+.modal , .scroller-container{
+    display: flex;
+    align-items: center;
+    width: 600px;
+    height: 600px;
+    left: 35%;
+    top: 20%;
+    border: solid 2px black;
+    border-radius: 10px;
+    background-color: black;
+    
+    
+}
+
+.modal{
+    transform: scale(0);
+    transition: 0.5s;
+}
+
+.modal.active{
+    transform: scale(1);
+    transition: 0,5s;
+    
+}
+
+.media-scroller{
+    width: 600px;
+    display: grid;
+    gap: 2rem;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    padding: 0 1rem 1rem;
+    scroll-snap-type: inline mandatory;
+    
+}
+
+.media-element{
+    width: 100%;
+}
+
+.media-element img{
+    width: 100%;
+    
+}
+.snaps-inline{
+    scroll-snap-type: inline mandatory;
+}
+
+.snaps-inline > * {
+    scroll-snap-align: start;
+}
+
+.media-scroller::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+    z-index: 99;
+}
+.left-button {
+    left: 0;
+}
+.right-button {
+    right: 0;
+}
+
+
+
+#overlay{
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    pointer-events: none;
+    
+}
+
+#overlay.active {
+    z-index: 0;
+    opacity: 1;
+    pointer-events: all;
 }

@@ -153,7 +153,7 @@ nav ul li a:hover {
     overflow-x: auto;
     overscroll-behavior-inline: contain;
     padding: 0 1rem 1rem;
-    scroll-snap-type: inline mandatory; /* Ensure smooth scrolling */
+    scroll-snap-type: inline mandatory;
 }
 
 
