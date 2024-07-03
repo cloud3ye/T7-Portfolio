@@ -1,5 +1,6 @@
 *.psd filter=lfs diff=lfs merge=lfs -text
 .mp4 filter=lfs diff=lfs merge=lfs -text
+ALL[[:space:]]EYEZ[[:space:]]ON[[:space:]]ME[[:space:]]FULL[[:space:]]VIDEO[[:space:]]DONE.mp4 filter=lfs diff=lfs merge=lfs -text
 *.mp4 filter=lfs diff=lfs merge=lfs -text
 *.jpg filter=lfs diff=lfs merge=lfs -text
 *.png filter=lfs diff=lfs merge=lfs -text
