@@ -1,3 +1,285 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3332cc77f9b195b1c563d0d74f684db0ee0dc75a9fbf73757b866942558139d7
-size 4253
+@font-face {
+    font-family: myFont;
+    src: url(Helvetica\ MediumItalic.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: myFont;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #010001;
+    color: white;
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+.Background-Video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+.Header{
+    width: 100%;
+    height: 100vh;
+}
+
+.container {
+    padding-top: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+    
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+    
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a span{
+    color: red;
+}
+nav ul li a:hover {
+    color: red;
+    transition: 0.3s;
+}
+
+.header-text{
+    margin-top: 15%;
+    margin-left: 35%;
+    font-size: 30px;
+}
+.header-text h1{
+    font-size: 60px;
+}
+
+
+.title{
+    color: red;
+}
+.name{
+    transition: 0.5s ease-out;
+}
+.name:hover, .name:hover span{
+    color: red;
+    transition:  0.3s ;
+    transition: all ease-in-out 0.3s;
+}
+
+.about {
+    width: 100%;
+    height: 100%;
+}
+
+.about-header{
+    margin-left: 20%;
+    font-size: 100px;
+    margin-bottom: 5%;
+    transition: 0.5s ease-out;
+}
+
+.about-header span{
+    margin-left: 10%;
+}
+
+.about-header:hover, .about-header:hover span{
+    color: red;
+    transition:  0.3s ;
+    transition: all ease-in-out 0.5s;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+
+.about-col-1 img{
+    width: 100%;
+    margin-top: 20%;
+}
+
+#casset {
+    margin-top: 0%;
+}
+
+.about-col-2 {
+    margin-top: 10%;
+    flex-basis: 60%;
+    font-size: 18px;
+}
+
+.sub-title {
+    font-size: 60px;
+    font-weight: 600;
+}
+.works-title{
+    margin-top: 10%;
+    margin-bottom: 12%;
+    margin-left: 45%;
+}
+
+.media-scroller {
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: column;
+    grid-auto-columns: 40%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    padding: 0 1rem 1rem;
+    scroll-snap-type: inline mandatory;
+}
+
+
+.media-element {
+    display: grid;
+    grid-template-rows: min-content;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: white;
+    color: #111111;
+    height: 350px;
+}
+
+.media-element img {
+    inline-size: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.media-element video {
+    inline-size: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+.media-element p{
+    margin-bottom: 20px;
+}
+
+.snaps-inline{
+    scroll-snap-type: inline mandatory;
+}
+
+.snaps-inline > * {
+    scroll-snap-align: start;
+}
+
+.media-scroller::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 99;
+}
+.left-button {
+    left: 0;
+}
+.right-button {
+    right: 0;
+}
+.scroller-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+footer-container{
+    width: 100%;
+    padding: 70px 30px 20px;
+
+}
+
+.social-icons{
+    display: flex;
+    justify-content: center;
+}
+.social-icons a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.social-icons a i{
+    font-size: 2rem;
+    opacity: 0.9;
+}
+.social-icons a:hover {
+    color: red;
+    transition: 0.3s;
+}
+.footernav {
+    margin: 30px 0;
+}
+.footernav ul{
+    display: flex;
+    justify-content: center;
+}
+.footernav ul li a{
+    color: white;
+    margin: 30px;
+    text-decoration: none;
+    font-size: 1.3rem;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.footernav ul li a:hover{
+    opacity: 1;
+}
+
+.footerbottom{
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+.footerbottom p{ 
+color: white;
+}
+.designer {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+
+/*  Portfolio */
+
