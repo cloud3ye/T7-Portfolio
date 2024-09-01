@@ -140,7 +140,7 @@ nav ul li a:hover {
     font-weight: 600;
 }
 .works-title{
-    margin-top: 10%;
+    margin-top: 18%;
     margin-bottom: 12%;
     margin-left: 45%;
 }
@@ -283,3 +283,133 @@ color: white;
 
 /*  Portfolio */
 
+/*-------small screen---------*/
+
+@media only screen and (max-width: 1200px){
+    .Background-Video video {
+       position: fixed;
+       width: 100%;
+       top: 30%;
+       scale: 4;
+       object-fit: cover;
+       overflow-x: hidden;
+    }
+    nav {
+        justify-content: space-around;
+    }
+    nav img{
+        margin-top: 90%;
+        scale: 2.5;
+    }
+    nav ul li a{
+        font-size: 72px;
+    }
+    .Header{
+        width: 80vh;
+        overflow-x: hidden;
+    }
+    .header-text{
+        font-size: 120px;
+        margin-top: 50%;
+        margin-left: 0;
+    }
+    .header-text h1{
+        font-size: 240px;
+    }
+    .about{
+        width: 80vh;
+        overflow-x: hidden;
+    }
+    .about-header{
+        margin-top: 40%;
+        margin-left: 0%;
+        font-size: 120px;
+    }
+    .row{
+        margin-top: 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .about-col-1{
+        flex-basis: 0%;
+    }
+    
+    .about-col-1 img{
+        display: none;
+    }
+    
+    .sub-title {
+        display: none;
+    }
+    .about-col-2 p{
+        font-size: 64px;
+        text-align: center;
+        margin-bottom: 10%;
+    }
+    .works-title{
+        display: none;
+    }
+    .media-scroller {
+        grid-auto-columns: 100%;
+        width: 65vh;
+    }
+    .media-element {
+        height: 65vh;
+    }
+    footer{
+        width: 80vh;
+        margin-top: 10vh;
+    }
+    .footernav ul li a{
+        font-size: 5rem;
+    }
+    .footerbottom p{ 
+        font-size: 48px;
+    }
+    .social-icons{
+        justify-content: space-evenly;
+    }
+    .social-icons a{
+        padding: 20px;
+    }
+    .social-icons a i{
+        font-size: 4rem;
+        opacity: 0.9;
+    }
+    .left-button {
+        display: none;
+    }
+    .right-button {
+        display: none;
+    }
+    
+}
+
+@media only screen and (max-width: 1000px){
+    nav ul li a{
+        font-size: 54px;
+    }
+    .header-text{
+        font-size: 96px;
+        margin-top: 50%;
+        margin-left: 0;
+    }
+    .header-text h1{
+        font-size: 180px;
+    }
+    .about-header{
+        font-size: 90px;
+    }
+    .about-col-2 p{
+        font-size: 48px;
+    }
+    .footernav ul li a{
+        font-size: 4rem;
+    }
+    .footerbottom p{ 
+        font-size: 36px;
+    }
+}
